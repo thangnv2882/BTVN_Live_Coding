@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(58, 67, 73);
+  /* Dương fixed here */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 0 1rem;
+  /*  */
+}
+#click_all,
+#click_app,
+#click_card,
+#click_web {
+  display: none;
+}
+.text {
+  color: white;
+  margin: 50px 15px 30px;
+  padding: 7px 10px;
+  justify-content: center;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Duong fix here  */
+.content {
+  width: 70%;
+  margin: 0 auto;
+}
+/*  */
+.img_all,
+.img_app,
+.img_card,
+.img_web {
+  display: none;
+}
+
+.img_all img,
+.img_app img,
+.img_card img,
+.img_web img {
+  width: 30%;
+  margin-bottom: 16px;
+  box-shadow: 0 0 15px rgb(65, 221, 135);
+  border-radius: 5px;
+}
+
+/* Duong fix here  */
+#click_all:checked ~ * .img_all,
+#click_app:checked ~ * .img_app,
+#click_card:checked ~ * .img_card,
+#click_web:checked ~ * .img_web {
+  visibility: visible;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/*  */
+
+#click_all:checked ~ .text_all,
+#click_app:checked ~ .text_app,
+#click_card:checked ~ .text_card,
+#click_web:checked ~ .text_web {
+  background-color: rgb(65, 221, 135);
+  box-shadow: 0 0 5px rgb(65, 221, 135);
+}
+
+#click_all:hover ~ .text_all,
+#click_app:hover ~ .text_app,
+#click_card:hover ~ .text_card,
+#click_web:hover ~ .text_web {
+  background-color: rgb(65, 221, 135);
+  transition: 0.5s;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgb(65, 221, 135);
+}
+
